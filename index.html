@@ -2,35 +2,75 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mood Tracker with Pattern Detection</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="root"></div>
+    <div class="container">
+        <header>
+            <h1>Mood Tracker</h1>
+            <div class="last-active">Last active: <span id="last-active-time">Never</span></div>
+        </header>
 
-  <!-- Load React and dependencies -->
+```
+    <main>
+        <!-- Add New Tracking Item Section -->
+        <section class="add-item-section">
+            <h2>Add Tracking Item</h2>
+            <div class="add-item-form">
+                <input type="text" id="new-item-name" placeholder="e.g., mood, irritability, hours of sleep">
+                <select id="new-item-type">
+                    <option value="scale">Scale (1-10)</option>
+                    <option value="number">Number</option>
+                    <option value="text">Text</option>
+                </select>
+                <button id="add-item-btn">Add Item</button>
+            </div>
+        </section>
 
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <!-- Active Tracking Items -->
+        <section class="tracking-items">
+            <h2>Today's Tracking</h2>
+            <div id="tracking-items-container">
+                <!-- Tracking items will be dynamically added here -->
+            </div>
+            <button id="save-entry-btn" class="save-btn">Save Entry</button>
+        </section>
 
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <!-- Activity Insights -->
+        <section class="insights">
+            <h2>Activity Insights</h2>
+            <div class="insight-cards">
+                <div class="insight-card">
+                    <h3>Current Session</h3>
+                    <p id="session-duration">0 minutes</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Mood Indicator</h3>
+                    <p id="mood-indicator">Analyzing...</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Days Tracked</h3>
+                    <p id="days-tracked">0</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- Load Babel for JSX -->
+        <!-- History Section -->
+        <section class="history">
+            <h2>Recent Entries</h2>
+            <div id="history-container">
+                <!-- History entries will be displayed here -->
+            </div>
+        </section>
+    </main>
+</div>
 
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-  <!-- Load Lucide Icons -->
-
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
-  <!-- Load Pattern Detection Module -->
-
-  <script src="./patternDetection.js"></script>
-
-  <!-- Load Main App -->
-
-  <script type="text/babel" src="./app.js"></script>
+<!-- Load all modules -->
+<script type="module" src="js/main.js"></script>
+```
 
 </body>
 </html>
