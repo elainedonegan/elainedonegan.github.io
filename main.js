@@ -1,10 +1,10 @@
 // Main module - orchestrates all other modules
-import { StorageManager } from ‘./modules/storage.js’;
-import { TrackingManager } from ‘./modules/tracking.js’;
-import { ActivityMonitor } from ‘./modules/activity.js’;
-import { HistoryManager } from ‘./modules/history.js’;
-import { InsightsManager } from ‘./modules/insights.js’;
-import { UIManager } from ‘./modules/ui.js’;
+import { StorageManager } from ‘.storage.js’;
+import { TrackingManager } from ‘.tracking.js’;
+import { ActivityMonitor } from ‘.activity.js’;
+import { HistoryManager } from ‘.history.js’;
+import { InsightsManager } from ‘.insights.js’;
+import { UIManager } from ‘.ui.js’;
 
 class MoodTrackerApp {
 constructor() {
